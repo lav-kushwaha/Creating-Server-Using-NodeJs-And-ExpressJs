@@ -1,0 +1,16 @@
+{
+  "name": "lav",
+  "version": "1.0.0",
+  "description": "this is my first ",
+  "main": "script.js",
+  "scripts": {
+    "start":"node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lav",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.1",
+    "pokemon": "^2.3.5"
+  }
+}
