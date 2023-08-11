@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .container{
+            background-color: rgb(107, 118, 114);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login{
+                border-radius:7px;
+                margin-top:30px;
+                height:450px;
+                width:400px;
+                background-color: white;
+        }
+    
+        .wrapper h2{
+                margin-top:45px;
+                text-align:center;
+                text-decoration: underline;
+                color:#333;
+        }
+        .wrapper input{
+            margin-left:25px;
+            margin-block:30px;
+            padding-block:5px;
+            width:340px;
+            border:none;
+            border-bottom:1px solid rgba(70,70,70,0.5);
+            outline:none;
+            font-size:15px;
+        }
+        .loginbtn{
+            padding-inline:80px;
+            padding-block:12px;
+            border:none;
+            border-radius:5px;
+            margin-left:103px;
+            margin-top:20px;
+            background-color:rgb(205, 54, 27);
+            color:white;  
+            font-weight:400;
+            transition:0.4s ease-in-out;
+        }
+        .loginbtn:hover {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login">
+            <div class="wrapper">
+                <form action="/api/v1/login" method="POST">
+                <h2>Login</h2>
+                <input type="text" placeholder="Enter Your Name" name="name" id="name" >
+                <input type="email" placeholder="Enter Your Email" name="email" id="eamil">
+                <input type="password" placeholder="Enter Your Password" name="password" id="password">
+                <button class="loginbtn" type="submit">Login</button>
+               </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

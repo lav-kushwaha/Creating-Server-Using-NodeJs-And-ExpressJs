@@ -7,7 +7,7 @@ const PORT = 4000;
 const hostname = "localhost";
 
 const server = http.createServer((req,res)=>{
-    // res.write("Lav Kushwaha");
+   //res.write("Lav Kushwaha");
     // res.end("  working");
     //  console.log(req.url);
     if(req.url==="/")
