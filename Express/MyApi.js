@@ -8,7 +8,7 @@ const PORT = 4000;
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.json()); //when we are creating post API Then we have to call this method.
-app.use("/api/v1" + router);//Here Used Router.
+app.use("/api/v1",router);//Here Used Router.
 
 app.get('/',(req,res)=>{
      res.sendFile(path.join(__dirname + "/LoginPage.html"));
