@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+//Connecting NodeJs with MongoDB. StudentData is DataBaseName.
 mongoose.connect("mongodb://127.0.0.1:27017/StudentData",
 {
     useNewUrlParser:true,
@@ -12,12 +13,15 @@ mongoose.connect("mongodb://127.0.0.1:27017/StudentData",
     console.log(err)
 });
 
+
+//Creating Schema.
 const student = new mongoose.Schema({
     name:{type:String},
     emailId:{type: String },
     address:{type:String},
 });
 
+//Creating Model.-> StudentDetails is collection name.
 const studModel = new mongoose.model("StudentDetails",student);
 
 const adder = async () => {
@@ -35,10 +39,25 @@ const adder = async () => {
     //     name:"Kush",
     //     emailId:"Kush@gmail.com",
     //     address:"Rakholi"
-    // });
+    // }); 
 
     //Read Data from MongoDB.
-    const read = await studModel.find();
-    console.log(read)
+    // const read = await studModel.find();
+    // console.log(read)
+
+    //Reading Data Using Comparision Operator.
+    // const operatorz = await studModel.find({name:{$eq:"Kush"}});
+    // console.log(operatorz);
+
+    //Update.
+    // const updatez = await studModel.updateMany({name:"Kush"},{$set:{name:"Lav"}})
+    // console.log(updatez);
+
+    //Read Data using find.
+    // const read = await studModel.find();
+    // console.log(read);
+
+    
+
 }
 adder();
